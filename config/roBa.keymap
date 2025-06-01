@@ -64,6 +64,15 @@
 
             tap-ms = <10>;
         };
+
+        tapdance_to_kana: tapdance_to_kana {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE_TO_KANA";
+            #binding-cells = <0>;
+            bindings = <&kp INTERNATIONAL_2>, <&kp LANGUAGE_2>;
+
+            tapping-term-ms = <400>;
+        };
     };
 
     keymap {
@@ -71,10 +80,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                        &kp T                                                                  &kp Y        &kp U  &lt 3 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G             &kp SPACE                             &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B             &lt_to_layer_0 4 AT_SIGN              &kp COLON      &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp ESCAPE        &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LANGUAGE_2  &lt 2 LANGUAGE_2  &lt_to_layer_0 1 INTERNATIONAL_2      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp Q             &kp W         &kp E         &kp R                        &kp T                                               &kp Y        &kp U  &lt 3 I    &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F                        &kp G  &kp SPACE                     &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B  &lt_to_layer_0 4 AT_SIGN      &kp COLON      &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp ESCAPE        &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 LANGUAGE_2  &mo 4  &tapdance_to_kana             &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_UP SCRL_DOWN>;
@@ -111,10 +120,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &mkp MB3  &trans                        &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &mkp MB1  &mkp MB2  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans    &trans    &trans      &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans    &trans    &trans      &trans  &trans                                &trans
             >;
         };
 
