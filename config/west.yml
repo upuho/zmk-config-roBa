@@ -6,13 +6,15 @@ manifest:
       url-base: https://github.com/kumamuk-git
     - name: upuho
       url-base: https://github.com/upuho
+    - name: inorichi
+      url-base: https://github.com/inorichi
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: upuho
+      remote: inorichi
       revision: main
   self:
     path: config
