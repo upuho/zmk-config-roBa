@@ -6,8 +6,8 @@ manifest:
       url-base: https://github.com/kumamuk-git
     # - name: upuho
       # url-base: https://github.com/upuho
-    # - name: inorichi
-      # url-base: https://github.com/inorichi
+     - name: inorichi
+      url-base: https://github.com/inorichi
   projects:
     - name: zmk
       remote: zmkfirmware
