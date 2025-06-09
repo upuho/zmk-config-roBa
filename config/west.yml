@@ -14,7 +14,7 @@ manifest:
       revision: main
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: inorichi #test
+      remote: inorichi #tes
       revision: main
   self:
     path: config
