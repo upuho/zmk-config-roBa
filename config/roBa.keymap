@@ -57,7 +57,6 @@
             tapping-term-ms = <200>;
         };
 
-        tap-dance-toKana:
     };
 
     keymap {
