@@ -57,6 +57,14 @@
             tapping-term-ms = <200>;
         };
 
+        tap_dance_toKana: tap_dance_toKana {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_TOKANA";
+            #binding-cells = <0>;
+            bindings = <&kp INT_KANA>, <&kp LANGUAGE_2>;
+
+            tapping-term-ms = <400>;
+        };
     };
 
     keymap {
